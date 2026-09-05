@@ -48,7 +48,7 @@ curl -X POST localhost:5000/transfer -H "Content-Type: application/json" \
 # charged twice; you get back the original transaction.
 ```
 
-## What this project demonstrates (and how to talk about it in interviews)
+## What this project demonstrates 
 
 **1. Atomic, race-safe transfers**
 `transfer()` locks both the sender's and receiver's rows with
@@ -89,7 +89,7 @@ implementation is simple.
 **6. Rate limiting**
 `/transfer` is rate-limited per client to blunt abuse/retry storms.
 
-## Possible extensions (good "what would you add next" answers)
+## Possible extensions 
 
 - Move idempotency key checking to happen *before* acquiring locks, with a
   short-lived Redis cache instead of a DB table, for lower latency.
