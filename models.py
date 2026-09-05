@@ -2,7 +2,7 @@
 models.py
 Database models for PayFlow.
 
-Design notes (things worth explaining in an interview):
+Design notes:
 - Balance is stored as Integer (paise/cents), never Float. Floats cause rounding
   errors in money math — this is a classic real-world payments gotcha.
 - Transaction rows are immutable (append-only ledger). We never edit balances
