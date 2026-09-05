@@ -9,7 +9,7 @@ Run locally:
     export JWT_SECRET_KEY=change-me
     flask --app app run --debug
 
-Key concepts demonstrated (worth being able to explain in an interview):
+Key concepts demonstrated:
 1. Atomic transfers - a transfer either fully succeeds or fully fails.
    We use a single DB transaction with row-level locking (SELECT FOR UPDATE)
    so two simultaneous transfers on the same account can't corrupt the balance.
